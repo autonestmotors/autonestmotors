@@ -150,7 +150,35 @@
             .hero h1 {
                 font-size: 38px;
             }
-        }
+       .car-gallery {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+.car-gallery img {
+    width: 100%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+.car-gallery img.large {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 900px;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}} }
     </style>
 </head>
 
@@ -181,10 +209,11 @@
 
         <div class="car">
           <div class="car-gallery">
-    <img src="WhatsApp Image 2026-09-14 at 8.11.22 PM.jpeg" alt="Toyota Vitz">
-    <img src="WhatsApp Image 2026-09-14 at 8.11.23 PM (1).jpeg" alt="Toyota Vitz">
-    <img src="WhatsApp Image 2026-09-14 at 8.11.23 PM.jpeg" alt="Toyota Vitz">
-    <img src="WhatsApp Image 2026-09-14 at 8.11.24 PM.jpeg" alt="Toyota Vitz">
+<div class="car-gallery">
+    <img src="WhatsApp Image 2026-09-14 at 8.11.22 PM.jpeg" alt="Toyota Vitz" onclick="this.classList.toggle('large')">
+    <img src="WhatsApp Image 2026-09-14 at 8.11.23 PM (1).jpeg" alt="Toyota Vitz" onclick="this.classList.toggle('large')">
+    <img src="WhatsApp Image 2026-09-14 at 8.11.23 PM.jpeg" alt="Toyota Vitz" onclick="this.classList.toggle('large')">
+    <img src="WhatsApp Image 2026-09-14 at 8.11.24 PM.jpeg" alt="Toyota Vitz" onclick="this.classList.toggle('large')">
 </div>
             <div class="car-info">
               <h3>Toyota Vitz — KCW</h3>

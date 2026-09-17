@@ -114,11 +114,22 @@
      .featured-section {
     background: white;
 }   
-        .section-title {
-            text-align: center;
-            margin-bottom: 35px;
-            font-size: 32px;
-        }
+     .section-title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #e63946;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
 
         .cars {
             display: grid;

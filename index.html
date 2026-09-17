@@ -228,7 +228,58 @@
 .car-thumbnails img:hover {
     border-color: #333;
 } }
-      
+     .car-details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.car-details-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.car-details-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.back-btn {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+} 
     </style>
 </head>
 
@@ -512,11 +563,35 @@
     <p>© 2026 AutoNest Motors. All Rights Reserved.</p>
 </footer>
 
+<div id="carDetails" class="car-details">
+  <div class="car-details-content">
+    <button onclick="closeCarDetails()" class="close-btn">✕</button>
+
+    <img src="WhatsApp Image 2026-09-14 at 8.11.22 PM.jpeg" alt="Toyota Vitz KCW">
+
+    <h2>Toyota Vitz — KCW</h2>
+
+    <p>2012 • 1000cc • Accident Free • Mechanically Fit</p>
+
+    <div class="price">KSh 598,000</div>
+
+    <a href="https://wa.me/254756736658" target="_blank" class="whatsapp-btn">
+      💬 WhatsApp Us
+    </a>
+
+    <button onclick="closeCarDetails()" class="back-btn">
+      ← Back to Cars
+    </button>
+  </div>
+</div>
 <script>
 function showCarDetails() {
-    alert("Toyota Vitz — KCW\n2012 • 1000cc\nKSh 598,000\n\nAccident Free • Mechanically Fit");
+    document.getElementById("carDetails").style.display = "flex";
+}
+
+function closeCarDetails() {
+    document.getElementById("carDetails").style.display = "none";
 }
 </script>
-
 </body>
 </html>
